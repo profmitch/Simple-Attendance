@@ -1,0 +1,47 @@
+courseName: "Chemistry 3A"
+activeTerm: Spring26
+termsFolderPaths:
+  downloadsFolder: "D:/Downloads"
+  terms: 
+    - term: Fall25
+      sections:
+        - day: Tue
+          number: 49357
+        - day: Thu
+          number: 49358
+      path: "D:/Mavigozler GitHub/mavigozler.github.io/Teaching/Chemistry/Fall 2025 3A"
+    - term: Spring26
+      sections:
+        - day: Tue
+          number: 19320
+        - day: Thu
+          number: 19321
+      daySwap: [ 1012110, 0663703,  ]
+      path: "D:/Mavigozler GitHub/mavigozler.github.io/Teaching/Chemistry/Spring 2026 3A"
+rosters:
+  recordsHeaders: [ "#","Name","ID","Email","Status" ]
+  fileNamePrompt: "Chem3A-<5-digitSec#> roster YYYYMMDD.prn"
+  fileNamesRE:
+     # - "section-rosters_CHEM-3A-(\\d+)_.*\\.csv" 
+    - "Chem3[Aa]-?\\d{5}\\s+roster \\d{8}\\.prn"
+  filesRelpath: "Attendance/Roster Records"
+attendance:
+  recordsHeaders: [ '"Timestamp"','"Attendance Code"','"Student ID"','"Name"' ]
+  fileNamePrompt: ["AttendanceYYYYMMDD.csv", "AttendanceYYYYMMDD.csv.zip"]
+  fileNamesRE: "Chem3A Attendance\\s*\\d{8}\\.csv(\\.zip)?"
+  filesRelpath: "Attendance/Attendance Records"
+reports:
+  relpath: "Attendance/Attendance Reports"
+  fileNameFormat: "Attendance Report-YYYYMMDD #NN.txt"
+symlink:
+  symlinkContainingDir: "D:/Mavigozler GitHub/mavigozler.github.io/Simple Attendance"
+  symlinkNameValue:   ".vscode"
+  realItemPath: "D:/dev/_Templates/.vscode"
+  symlinkType: Directory
+debug:  # allows specifc roster and attendance 
+  rosters: [ "Chem3a-19320 roster 20260207.prn", "Chem3a-19321 roster 20260207.prn" ]
+  attendance: [ "Chem3A Attendance 20260205.csv" ]
+codesUsed: 
+  # - date: string
+  #  lecture: string
+  #  lab: string

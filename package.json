@@ -5,20 +5,36 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "node": "tsc -p tsconfig.node.json",
+    "vscode": "cd .vscode && tsc -p ./tsconfig.vscode.json && node ./tasksJsonGenerator.js && node ./launchJsonGenerator.js",
     "browser": "tsc -p tsconfig.browser.json",
-    "bundle": "tsc -p tsconfig.browser.json && browserify js/simpleattendanceBrowser.js -o public/bundle.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "existsgulpdir": "cmd ./build/Gulp/existsgulpdir.bat",
+    "setgulpdir": "cd ./build/Gulp/run",
+    "build": "(npm run setgulpdir && gulp build)",
+    "clean": "(npm run setgulpdir && gulp clean)",
+    "dev": "(npm run setgulpdir && gulp dev)",
+    "lint": "(npm run setgulpdir && gulp lint)",
+    "test": "(npm run setgulpdir && gulp test)",
+    "pregulp": "tsc -p ./tsconfig.preGulpBuild.json && node ./build/Gulp/pre/preGulpBuild.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.15.0",
+  "packageManager": "pnpm@10.31.0",
   "dependencies": {
+    "@types/adm-zip": "^0.5.7",
+    "@types/blessed": "^0.1.27",
+    "@types/glob": "^9.0.0",
+    "@types/inquirer": "^9.0.9",
     "@types/js-yaml": "^4.0.9",
+    "adm-zip": "^0.5.16",
+    "blessed": "^0.1.81",
     "csv-generate": "^4.5.0",
     "csv-parse": "^5.5.0",
-    "js-yaml": "^4.1.0"
+    "csv-stringify": "^6.6.0",
+    "glob": "^13.0.0",
+    "inquirer": "^13.2.0",
+    "js-yaml": "^4.1.0",
+    "mkdirp": "^3.0.1"
   },
   "devDependencies": {
     "@types/columnify": "^1.5.4",

@@ -7,6 +7,9 @@
     <title>Simple Attendance</title>
     <link rel="stylesheet" href="../css/std.css">
     <link rel="stylesheet" href="../css/simpleAttendance.css">
+    <!--
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/jsyaml.min.js"></script>
+-->s
     <script type="module" src="../js/simpleattendanceBrowser.js"></script>
 </head>
 <body>
@@ -17,27 +20,41 @@
     <br>for use at and inspired by Fresno City College
    </span>
 </p>
-<div class="container">
+<div class="container" id="mainbox">
 <form target="_blank">
     <div id="docgrid">
     <div id="left-side">
-        <label>
-        Select the appropriately formatted CSV file that contains your roster
+        
+        <div id="roster-dropzone" class="dropzone">
+        <p><i>Roster</i> Files Dropzone
         <a href="SimpleAttendanceHelp.html" target="_blank">
-        <img src="../images/help-icon-15x15.jpg" alt="help for this"
-            style="width:12px;vertical-align: middle;"></a>
-        <input id="roster-file" type="file" accept=".csv">
-        </label>
-
-        <div id="dropzone">
-        <label id="attendance-files-prompt" style="margin:0;">Drop files or a folder here 
-        or use the <b>Choose Files</b> button<br><br>
-        Files should be of format <span id="attendance-file-format"></span>
-        <input id="attendance-files-folder-input" type="file" multiple accept=".csv">
+            <img src="../images/help-icon-15x15.jpg" alt="help for this"
+            style="width:12px;vertical-align: middle;"></a></p>
+        <label id="roster-files-prompt" style="margin:0;">Drop files or a folder here 
+            <!-- or use the <b>Choose Files</b> button<br> --> <br>
+        Files should be of format <span id="roster-file-format"></span>
+<!--      <input id="roster-files-folder-input" type="file" multiple accept=".csv"> -->
         </label>
         <span id="select-list-report"></span>
         <span id="select-list"></span>
         </div>
+
+
+        <div id="attendance-dropzone" class="dropzone">
+        <p><i>Attendance</i> Files Dropzone
+        <a href="SimpleAttendanceHelp.html" target="_blank">
+            <img src="../images/help-icon-15x15.jpg" alt="help for this"
+            style="width:12px;vertical-align: middle;"></a></p>
+        <label id="attendance-files-prompt" style="margin:0;">Drop files or a folder here 
+           <!-- or use the <b>Choose Files</b> button<br> --> <br>
+        Files should be of format <span id="attendance-file-format"></span>
+<!--      <input id="attendance-files-folder-input" type="file" multiple accept=".csv"> -->
+        </label>
+        <span id="select-list-report"></span>
+        <span id="select-list"></span>
+        </div>
+
+
         <button type="button" id="submit-button">Process</button>
         <button type="reset" id="form-reset">Reset</button>
         <input type="checkbox" id="control-time">Control Time        

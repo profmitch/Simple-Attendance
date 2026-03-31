@@ -1,0 +1,123 @@
+courseName: Chemistry 3A
+activeTerm: Spring26
+termsFolderPaths:
+  downloadsFolder: D:/Downloads
+  terms:
+    - term: Fall25
+      sections:
+        - day: Tue
+          number: 49357
+        - day: Thu
+          number: 49358
+      path: >-
+        D:/Mavigozler GitHub/mavigozler.github.io/Teaching/Chemistry/Fall 2025
+        3A
+    - term: Spring26
+      sections:
+        - day: Tue
+          number: 19320
+        - day: Thu
+          number: 19321
+      daySwap:
+        - 1012110
+        - 663703
+      path: >-
+        D:/Mavigozler GitHub/mavigozler.github.io/Teaching/Chemistry/Spring 2026
+        3A
+rosters:
+  recordsHeaders:
+    - '#'
+    - Name
+    - ID
+    - Email
+    - Status
+  fileNamePrompt: Chem3A-<5-digitSec#> roster YYYYMMDD.prn
+  fileNamesRE:
+    - Chem3[Aa]-?\d{5}\s+roster \d{8}\.prn
+  filesRelpath: Attendance/Roster Records
+attendance:
+  recordsHeaders:
+    - '"Timestamp"'
+    - '"Attendance Code"'
+    - '"Student ID"'
+    - '"Name"'
+  fileNamePrompt:
+    - AttendanceYYYYMMDD.csv
+    - AttendanceYYYYMMDD.csv.zip
+  fileNamesRE: Chem3A Attendance\s*\d{8}\.csv(\.zip)?
+  filesRelpath: Attendance/Attendance Records
+reports:
+  relpath: Attendance/Attendance Reports
+  fileNameFormat: 'Attendance Report-YYYYMMDD #NN.txt'
+symlink:
+  symlinkContainingDir: D:/Mavigozler GitHub/mavigozler.github.io/Simple Attendance
+  symlinkNameValue: .vscode
+  realItemPath: D:/dev/_Templates/.vscode
+  symlinkType: Directory
+debug:
+  rosters:
+    - Chem3a-19320 roster 20260207.prn
+    - Chem3a-19321 roster 20260207.prn
+  attendance:
+    - TestAttendance.csv
+codesUsed:
+  - date: 2026/01/13
+    lecture: 38921LEC
+    lab: 74605TUE
+  - date: 2026/01/15
+    lecture: 52189LEC
+    lab: 10476THU
+  - date: 2026/01/20
+    lecture: 81254LEC
+    lab: 67390TUE
+  - date: 2026/01/22
+    lecture: 24817LEC
+    lab: 95032THU
+  - date: 2026/01/27
+    lecture: 40962LEC
+    lab: 17583TUE
+  - date: 2026/01/29
+    lecture: 85921LEC
+    lab: 36470THU
+  - date: 2026/02/03
+    lecture: ''
+    lab: 91206TUE
+  - date: 2026/02/04
+    lecture: ''
+    lab: 91206TUE
+  - date: 2026/02/05
+    lecture: 78541LEC
+    lab: 20839THU
+  - date: 2026/02/10
+    lecture: 19372LEC
+    lab: 50849TUE
+  - date: 2026/02/12
+    lecture: 55012LEC
+    lab: 10987THU
+  - date: 2026/02/17
+    lecture: 80753LECT
+    lab: 48512TUE
+  - date: 2026/02/19
+    lecture: 51172LEC
+    lab: 87002THU
+  - date: 2026/02/24
+    lecture: 32847LEC
+    lab: 16983TUE
+  - date: 2026/02/26
+    lecture: 76490LEC
+    lab: 18436THU
+  - date: 2026/03/03
+    lecture: 47015LEC
+    lab: 83621TUE
+  - date: 2026/03/05
+    lecture: 20598LEC
+    lab: 64973THU
+  - date: 2026/03/10
+    lecture: ''
+    lab: 32750TUE
+  - date: 2026/03/12
+    lecture: 86247LEC
+    lab: 15029THU
+  - date: 2026/03/17
+    lecture: 75820LEC
+    lab: 49036TUE

@@ -1,1 +1,195 @@
-d:/dev/css/std.css
+﻿   @media print {
+		body { font-size:12pt;margin:0;padding:0; }
+      table, tr { border:2px solid silver;}
+		h1 {  margin-top:0.5em; }
+		h2 {  margin-top:0.5em; }
+		h3 {  margin:0.5em 0 0 -0.5em; }
+		h4 {  margin:0.4em 0 0 -0.25em; }
+		h5 {  margin:0.75em 0 0 0; }
+		h6 {  margin:0.75em 0 0 0.25em; }
+	}
+   @page {
+      size:portrait;
+      margin:1in;
+   }
+
+   @media screen {
+      body { background-color:#f8fff8;
+         font:normal 16px Helvetica,Arial,sans-serif;
+      }
+		h1 {  margin:0.5em 0 0 -1em; }
+		h2 {  margin:0.5em 0 0 -0.75em; }
+		h3 {  margin:0.5em 0 0 -0.5em; }
+		h4 {  margin:0.4em 0 0 -0.25em;  }
+		h5 {  margin:0.75em 0 0 0; }
+		h6 {  margin:0.75em 0 0 0.25em;  } 
+	}
+   div.container {
+      background-color: white;
+      border: 1px solid blue;
+      width: 80%;
+      max-width: 50em;
+      margin: 1em auto;
+      padding: 1em 3em;
+   }
+	/* headings */
+	h1 { page-break-after:avoid;text-align:left;
+			font:bold 130% Helvetica,Arial,sans-serif;
+         color: navy }
+	h2 { page-break-after:avoid;text-align:left;
+			font:bold italic 115% Verdana,Arial,Helvetica,sans-serif;
+         color:darkblue;}
+	h3 { page-break-after:avoid;text-align:left;
+   font:bold oblique 110% Palatino,"Century Schoolbook","Times New Roman",Times,serif;
+			color:#050; }
+	h4 {  page-break-after:avoid;text-align:left;
+			font:bold 105% Helvetica,Tahoma,Arial,sans-serif;
+			color:#936; }
+	h5 { page-break-after:avoid;text-align:left;
+			font:bold italic 100% "Times New Roman","Times Roman",Times,serif;
+			color:#00e; }
+	h6 {  page-break-after:avoid;text-align:left;
+			font:bold oblique 100% Arial,Tahoma,Helvetica,sans-serif;
+			color:#d90; }
+	section {border-top:1px inset;padding-top:0.5em;padding-bottom:0.5em;}
+   p {margin-top:0.5em;}
+   sup, sub { font-size:75%;line-height:0;}
+   hr {margin:1em 5%;background-color:#d93;color:#d93;height:4px;
+			border-style:groove;}
+   kbd {border:2px solid black;font:bold 90% Arial,'Arial Narrow',Helvetica,sans-serif;
+         padding:1px 3px;border-radius:6px;background-color:#ddd;}
+   kbd.reverse {border:2px solid black;font:bold 90% Arial,'Arial Narrow',Helvetica,sans-serif;
+         padding:1px 3px;border-radius:6px;background-color:black;color:white;}
+	img {font:bold 70% Helvetica,Arial,sans-serif;color:green;
+    border:1px solid blue;}
+	q {quotes: '\201c' '\201d' '\2018' '\2019' }
+	q:before { content: open-quote;}
+	q:after  { content: close-quote; }
+	dfn {font-weight:bolder;color:navy;font-style:normal;}
+
+/* HTML 5 deprecated elements styled in CSS */
+   /* use class attribute 'tt' in inline element */
+   span.tt {font-family:"Courier New",Courier,monospace;}
+
+/* tables */
+   table { margin:1em auto; background-color:#ccc;
+    border-top:2px solid black;
+    border-bottom:2px solid black; }
+   th { font:bold 90% Helvetica,Arial,sans-serif;vertical-align:bottom;
+   	text-align:center; border:1px solid gray;background-color:white;padding:0.1em 0.25em;}
+   td { font:normal 100% Helvetica,Arial,sans-serif;padding:0.1em 0.2em;
+       background-color:#f0f8f4;vertical-align:top; }
+   caption { color:#c22;background-color:#e8e8ff;margin-top:1em;padding:0.25em 0.5em;
+			margin-bottom:0em;font:bold 83% Verdana,Arial,Helvetica,sans-serif; }
+   .th-bottom th {vertical-align:bottom;}
+   table.td-left td {text-align:left;}
+   table.td-right td {text-align:right;}
+   table.th-center th, table.td-center td {text-align:center;}
+   .right {text-align:right!important;}
+   .left {text-align:left!important;}
+   .center {text-align:center!important;}
+ table.eqn, table.eqnserif {border-top:none;border-bottom:none;}
+  td.table-note {font-size:75%;}
+   table.no-bkgd, table.no-bkgd th, table.no-bkgd td {background:none;border:none;}
+
+/* lists */
+ ol ol { list-style-type:lower-alpha; }
+ ol ul { list-style-type:square; }
+ ul, ol {margin-bottom:0.5em;margin-left:0em;padding-left:1em;}
+ ul {list-style-type:disc;}
+ ul ul {list-style-type:square;margin:0 auto;}
+ ul ul ul {list-style-type:circle;}
+
+   dt {font:bold 90% Arial,Helvetica,sans-serif;margin-top:0.5em;}
+/* anchors */
+
+   a:link, a:visited {color:blue;text-decoration:none;}
+   a:hover {color:red;text-decoration:none;}
+   span.strikeout, p.strikeout, li.strikeout, table.strikeout td,
+         table.strikeout th {text-decoration:line-through;}
+
+
+ #toc {font:normal 75% Verdana,Arial,sans-serif;line-height:130%;}
+
+ .eqn, .eqn td { background:none;text-align:center;padding:0;
+     font:normal 90% Helvetica,Arial,sans-serif;}
+ .eqnserif, .eqnserif td { background:none;text-align:center;padding:0;
+     font:normal 100% 'Times New Roman','Times Roman',Times,serif;
+		vertical-align:middle;}
+ table.eqnserif {margin-left:auto;margin-right:auto;}
+
+ .aligntop, td.aligntop, td.top, th.top {vertical-align:top;}
+ .alignbottom, .alignbottom td, td.bottom, th.bottom {vertical-align:bottom;}
+
+ .overbar {text-decoration:overline;}
+ .figcaption {color:blue;font:bold 85% Verdana,Arial,Helvetica,sans-serif;}
+ .numer {border-bottom:1px solid black;}
+
+ /* used for bigimage.js  -- start */
+ .leftimglegend { float:left;margin-right:3em;margin-bottom:0;
+     font:normal 60% Arial,Helvetica,sans-serif;}
+ .rightimglegend { float:right;margin-left:3em;margin-bottom:0;
+			font:normal 60% Arial,Helvetica,sans-serif;}
+  .leftimglegend > img, .rightimglegend > img {cursor:pointer;}
+
+ /* used for bigimage.js  -- end  */
+
+#title {font:bold 175% Tahoma,Arial,sans-serif;width:fit-content;
+			margin:1em auto;color:#09d;}
+#subtitle {font:bold 140% Helvetica,Arial,sans-serif;
+			text-align:center;margin:0.75em 0;color:#d09;}
+#rev-date {border-top:1px solid black;margin-top:2em;
+  padding-top:1.5em; }
+ #author {font:bold oblique 90% Palatino,'Times New Roman','Times Roman',Times,serif;
+   color:gray;margin:4em 0 2em 0;}
+  #byline { font:bold 110% Bookman,Palatino,sans-serif;text-align:center;}
+
+ .box-left {float:left;margin:1em 1.5em 1em 0;padding:1em;width:40%;
+ 	border:1px solid black;font-size:90%;background-color:#f4f4f4;}
+ .box-right {float:right;margin:1em 0 1em 1.5em;padding:1em;width:40%;
+ 	border:1px solid black;font-size:90%;background-color:#f4f4f4;}
+  .box-title {font:bold 95% Arial,Helvetica,sans-serif;color:blue;
+      margin:-0.5em 0 0.3em 0;}
+ .box-left ul, .box-right ul {list-style-type:none;margin:0;padding:0;}
+
+  .math {color:blue;margin:0 3em;font-size:100%;line-height: 5px;}
+ .contentblock {width:35em;margin:1em auto;text-align:justify;}
+#motd {background-color:#fff0f0;color:black;text-align:center;margin:0 auto;
+   font:normal 100% Tahoma,Verdana,sans-serif;padding:0.3em 1em;}
+
+   /****** CUSTOM TOOLTIP STYLING *****/
+.tooltip {
+  position: relative; 
+/*  display: inline-block; */
+  cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+  display: none;
+  font:normal 10pt Arial,sans-serif;
+/*  width: 160px; */
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px;
+  position: absolute;
+  z-index: 1;
+  /*bottom: 125%; /* Position above */
+  top: 100%;
+  /*right: -20%;*/
+  transform: translateX(20%);
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  display: block;
+}
+
+/*  How to use in markup
+
+      <div class="tooltip">
+      Hover me
+      <span class="tooltiptext">This is a styled tooltip</span>
+      </div>
+*/

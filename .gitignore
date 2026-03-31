@@ -5,3 +5,5 @@
 **/build/Gulp/run
 **/GenLib
 **/*.js.map
+**/src/iPowerShell.ts
+**/src/arraysExtended.ts

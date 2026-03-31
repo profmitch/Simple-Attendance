@@ -2,10 +2,13 @@
    "folders": [
       {
          "path": "."
+      },
+      {
+         "path": "../../../Mavigozler GitHub/mavigozler.github.io/Teaching/Chemistry/Spring 2026 3A/Attendance"
       }
    ],
    "settings": {
-      "liveServer.settings.multiRootWorkspaceName": "Simple Attendance",
+      "liveServer.settings.multiRootWorkspaceName": "mavigozler.github.io",
       "powershell.cwd": "Simple Attendance"
    }
 }

@@ -30,15 +30,21 @@ span#select-list {
 div.container {
    padding: 1em;
 }
-div#dropzone {
+div#mainbox {
+   max-width: 30em;
+}
+div.dropzone {
    padding:10px;
    border: 2pt dashed black;
    background-color: rgb(238, 231, 231);
-   width: fit-content;
+   width:300px;
    margin:5px 0 5px 0;
 }
+div#right-side {
+   display:none;
+   font-size:13px;
+}
 div#docgrid {
-   display: grid;
    grid-template-columns: auto auto;
    column-gap:1em;
 }
@@ -55,5 +61,5 @@ span#beforeText {
 }
 span.daySpanElem {
    display:grid;
-   grid-template-columns: auto auto;
+   grid-template-columns: 5.5em 12em;
 }
