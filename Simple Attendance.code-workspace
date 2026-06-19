@@ -4,11 +4,11 @@
          "path": "."
       },
       {
-         "path": "../../../Mavigozler GitHub/mavigozler.github.io/Teaching/Chemistry/Spring 2026 3A/Attendance"
+         "path": "../../../ProfMitch Github/profmitch.github.io/Teaching/Chemistry/Spring 2026 3A/Attendance"
       }
    ],
    "settings": {
-      "liveServer.settings.multiRootWorkspaceName": "mavigozler.github.io",
+      "liveServer.settings.multiRootWorkspaceName": "profmitch.github.io",
       "powershell.cwd": "Simple Attendance"
    }
 }

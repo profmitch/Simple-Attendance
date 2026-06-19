@@ -36,7 +36,7 @@ async function collectAttendanceRecords(): Promise<string[]> {
         AttendanceRecordsFolder,
         true
     );
-    const recordsFolder = "D:\\Mavigozler GitHub\\mavigozler.github.io\\Teaching\\Chemistry\\Fall 2025 3A\\Attendance";
+    const recordsFolder = "D:\\ProfMitch Github\\profmitch.github.io\\Teaching\\Chemistry\\Fall 2025 3A\\Attendance";
 
     const folderFiles = (await readdir(recordsFolder)).filter(item => item.search(/^Attendance\d{8}.csv$/i) == 0);
     AttendanceSessionFiles = folderFiles;
@@ -104,17 +104,21 @@ async function collectFiles(appInfo) {
         const today = new Date();
         let rosterFileReport = `Roster File Report for ${today.toLocaleDateString()}\n`;
         rosterFileReport += columnify(enrolled, { columns: ["StudentId", "Name", "Section", "Email"] });
-        await writeFile(`${appInfo.termsFolderPaths.downloadsFolder}\\RosterReport-${today.getFullYear()}` +
+        const rosterReportFileName = `${appInfo.termsFolderPaths.downloadsFolder}\\RosterReport-${today.getFullYear()}` +
             `${(today.getMonth() + 1).toString().padStart(2, "0")}` +
-            `${(today.getDate().toString().padStart(2, "0"))}.txt`, rosterFileReport, "utf8");
+            `${(today.getDate().toString().padStart(2, "0"))}.txt`;
+        await writeFile(rosterReportFileName, rosterFileReport, "utf8");
+        console.log(`Roster report '${rosterReportFileName}' successfully written to '${appInfo.termsFolderPaths.downloadsFolder}'`);
         stringify(enrolled, { columns: ["Section", "Name", "StudentId", "Email"],
             header: true }, (err, rosterFilesCSV) => {
             if (err)
                 throw err;
             (async () => {
-                await writeFile(`${appInfo.termsFolderPaths.downloadsFolder}\\Roster-${today.getFullYear()}` +
+                const rosterCSVFilename = `${appInfo.termsFolderPaths.downloadsFolder}\\Roster-${today.getFullYear()}` +
                     `${(today.getMonth() + 1).toString().padStart(2, "0")}` +
-                    `${(today.getDate().toString().padStart(2, "0"))}.csv`, rosterFilesCSV, "utf8");
+                    `${(today.getDate().toString().padStart(2, "0"))}.csv`;
+                await writeFile(rosterCSVFilename, rosterFilesCSV, "utf8");
+                console.log(`Roster CSV file '${rosterCSVFilename}' successfully written to '${appInfo.termsFolderPaths.downloadsFolder}'`);
             })();
         });
         //		let rosterFilesCSV = "StudentID,Name,Section,Email";

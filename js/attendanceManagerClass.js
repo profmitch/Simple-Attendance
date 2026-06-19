@@ -4,6 +4,9 @@ import inquirer from "inquirer";
 import yaml from "js-yaml";
 import { parse } from "../node_modules/csv-parse/dist/esm/sync.js";
 import { stringify } from "../node_modules/csv-stringify/dist/esm/sync.js";
+/********************************************************
+ *   Works with YAML file 'appinfo' and its config info
+ ********************************************************/
 export class AttendanceRecordsManager {
     termData;
     attendanceRecordsPath;
@@ -16,7 +19,8 @@ export class AttendanceRecordsManager {
         if (!termData)
             throw Error("Cannot initialize 'AttendanceRecordsManager' because active term not found in YAML file");
         this.termData = termData;
-        this.attendanceRecordsPath = `${this.termData.path}/${appInfo.attendance.filesRelpath}`;
+        if ((this.attendanceRecordsPath = `${this.termData.path}/${appInfo.attendance.filesRelpath}`) == undefined)
+            throw Error("Cannot find 'filesRelPath' in appInfo YAML configuration");
         this.attendanceFileNamesRE = new RegExp(appInfo.attendance.fileNamesRE);
         this.codesUsed = appInfo.codesUsed;
         this.attendanceRecordsHeaders = appInfo.attendance.recordsHeaders;

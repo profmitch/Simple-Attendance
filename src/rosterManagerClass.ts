@@ -394,7 +394,7 @@ export class RosterRecordsManager {
 			'CSV, PRN files (*.csv; *.prn)|*.csv;*.prn|All files (*.*)|*.*', // file types filter string
 			AttendanceRecordsFolder
 		);
-		//RosterFilePath = "D:\\Mavigozler GitHub\\mavigozler.github.io\\Teaching\\Chemistry\\Fall 2025 3A\\Attendance\\Section Rosters Week 3.csv";
+		//RosterFilePath = "D:\\ProfMitch Github\\profmitch.github.io\\Teaching\\Chemistry\\Fall 2025 3A\\Attendance\\Section Rosters Week 3.csv";
 
 		attendanceRecords = await collectAttendanceRecords();
 	} catch (exc) {

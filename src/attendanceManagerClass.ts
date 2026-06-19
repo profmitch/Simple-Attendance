@@ -9,6 +9,10 @@ import type { AppInfo, TermData, AttendanceCSVRaw, AttendanceCabinet,
 	YamlCode
 } from "./types/simpleattendanceTypes.d.ts";
 
+/********************************************************
+ *   Works with YAML file 'appinfo' and its config info
+ ********************************************************/
+
 
 export class AttendanceRecordsManager {
    termData: TermData;
@@ -23,7 +27,8 @@ export class AttendanceRecordsManager {
       if (!termData)
          throw Error("Cannot initialize 'AttendanceRecordsManager' because active term not found in YAML file");
       this.termData = termData;
-      this.attendanceRecordsPath = `${this.termData.path}/${appInfo.attendance.filesRelpath}`;
+      if ((this.attendanceRecordsPath = `${this.termData.path}/${appInfo.attendance.filesRelpath}`) == undefined)
+			throw Error("Cannot find 'filesRelPath' in appInfo YAML configuration");
       this.attendanceFileNamesRE = new RegExp(appInfo.attendance.fileNamesRE);
       this.codesUsed = appInfo.codesUsed;
       this.attendanceRecordsHeaders = appInfo.attendance.recordsHeaders;
@@ -233,7 +238,7 @@ export class AttendanceRecordsManager {
 			'CSV, PRN files (*.csv; *.prn)|*.csv;*.prn|All files (*.*)|*.*', // file types filter string
 			AttendanceRecordsFolder
 		);
-		//RosterFilePath = "D:\\Mavigozler GitHub\\mavigozler.github.io\\Teaching\\Chemistry\\Fall 2025 3A\\Attendance\\Section Rosters Week 3.csv";
+		//RosterFilePath = "D:\\ProfMitch Github\\profmitch.github.io\\Teaching\\Chemistry\\Fall 2025 3A\\Attendance\\Section Rosters Week 3.csv";
 
 		attendanceRecords = await collectAttendanceRecords();
 	} catch (exc) {

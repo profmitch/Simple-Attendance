@@ -10,7 +10,7 @@ termsFolderPaths:
         - day: Thu
           number: 49358
       path: >-
-        D:/Mavigozler GitHub/mavigozler.github.io/Teaching/Chemistry/Fall 2025
+        D:/ProfMitch Github/profmitch.github.io/Teaching/Chemistry/Fall 2025
         3A
     - term: Spring26
       sections:
@@ -21,8 +21,13 @@ termsFolderPaths:
       daySwap:
         - 1012110
         - 663703
+        - 1065482
+        - 862449
+        - 667404
+        - 863823
+        - 914213
       path: >-
-        D:/Mavigozler GitHub/mavigozler.github.io/Teaching/Chemistry/Spring 2026
+        D:/ProfMitch Github/profmitch.github.io/Teaching/Chemistry/Spring 2026
         3A
 rosters:
   recordsHeaders:
@@ -50,7 +55,7 @@ reports:
   relpath: Attendance/Attendance Reports
   fileNameFormat: 'Attendance Report-YYYYMMDD #NN.txt'
 symlink:
-  symlinkContainingDir: D:/Mavigozler GitHub/mavigozler.github.io/Simple Attendance
+  symlinkContainingDir: D:/ProfMitch Github/profmitch.github.io/Simple Attendance
   symlinkNameValue: .vscode
   realItemPath: D:/dev/_Templates/.vscode
   symlinkType: Directory
